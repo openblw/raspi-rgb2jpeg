@@ -8,5 +8,5 @@
 
 using namespace std;
 
-static const int FRAME_WIDTH = 320;
-static const int FRAME_HEIGHT = 240;
+static const int FRAME_WIDTH = 1024;
+static const int FRAME_HEIGHT = 512;

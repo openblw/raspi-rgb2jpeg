@@ -142,7 +142,7 @@ bool jpegEncoder::init() {
     int height16 = ALIGN(FRAME_HEIGHT, 16);
     def.format.image.nStride = width32;
     def.format.image.nSliceHeight = height16;
-    def.format.image.eColorFormat = OMX_COLOR_FormatYUV420PackedPlanar;
+    def.format.image.eColorFormat = OMX_COLOR_Format32bitARGB8888;
     def.format.image.eCompressionFormat = OMX_IMAGE_CodingUnused;
     def.nBufferSize = 614400;
 
