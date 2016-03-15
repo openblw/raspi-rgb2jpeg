@@ -1,0 +1,24 @@
+
+CFLAGS = -g -Wall -O0
+LDFLAGS = -L$(SDKSTAGE)/usr/lib/gcc/arm-linux-gnueabihf/4.9 -L$(SDKSTAGE)/opt/vc/lib -L$(SDKSTAGE)/opt/vc/src/hello_pi/libs/ilclient -lilclient -lopenmaxil -lvcos -lbcm_host -lvchiq_arm -lpthread -ldl -lm -lrt
+INCLUDES = -I$(SDKSTAGE)/opt/vc/include -I$(SDKSTAGE)/opt/vc/include/interface/vcos/pthreads \
+		-I$(SDKSTAGE)/opt/vc/include/interface/vmcs_host/linux -I$(SDKSTAGE)/opt/vc/src/hello_pi/libs/ilclient -I$(SDKSTAGE)/opt/vc/include/interface/vmcs_host/khronos/IL -Wl,-rpath
+
+SRC := $(SRC) $(APP).cpp
+OBJS := $(OBJS) $(APP).o
+
+all: $(APP) $(SRC)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@ -Wno-deprecated-declarations
+
+$(APP): $(OBJS)
+	$(CC) -o $@ -Wl,--whole-archive $(OBJS) $(LDFLAGS) -Wl,--no-whole-archive -rdynamic
+
+.PHONY: clean rebuild
+
+clean:
+	rm -f $(APP) $(APP).o $(CLEAN)
+
+rebuild:
+	make -f Makefile-shared clean && make -f Makefile-shared

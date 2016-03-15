@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/AR/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/AR/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/AR/value=arm-linux-gnueabihf-ar
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/CC/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/CC/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/CC/value=arm-linux-gnueabihf-g++
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/PATH/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/PATH/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/PATH/value=/usr/local/linaro/arm-linux-gnueabihf-raspbian/bin\:/usr/bin\:/bin\:/usr/sbin\:/sbin
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/SDKSTAGE/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/SDKSTAGE/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/SDKSTAGE/value=/mnt/raspi
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.523388506/appendContributed=true
